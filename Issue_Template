@@ -1,0 +1,52 @@
+---
+name: Bug Report
+about: Report a bug or unexpected behavior in IQOS
+title: "[BUG] "
+labels: bug
+assignees: ''
+---
+
+## Description
+A clear and concise description of what the bug is.
+
+## How to Reproduce
+Steps to reproduce the behavior:
+1. 
+2. 
+3. 
+
+## Expected Behavior
+A clear and concise description of what you expected to happen.
+
+## Actual Behavior
+A clear and concise description of what actually happened.
+
+## Hardware
+- VEX IQ Brain Generation: (1st gen / 2nd gen)
+- Motors connected: 
+- Sensors connected: 
+- Battery level when issue occurred:
+
+## Software
+- IQOS Version:
+- VEXcode IQ SDK Version:
+- Operating System (for development machine):
+
+## Code Sample
+```cpp
+// Paste the relevant code here
+```
+
+## Logs
+```
+// Paste any IQOS logs or error codes here
+```
+
+## Additional Context
+Add any other context about the problem here.
+
+## Checklist
+- [ ] I have tested this on real VEX IQ hardware
+- [ ] I have checked that this issue has not already been reported
+- [ ] I have included all relevant logs and error codes
+- [ ] I have included a code sample that reproduces the issue
