@@ -11,7 +11,9 @@
 			"${vex_sdkPath}/include/**",
 			"${workspaceFolder}/include/**",
 			"${workspaceFolder}/src/**",
-			"${workspaceFolder}/vex/**"
+			"${workspaceFolder}/vex/**",
+			"${workspaceFolder}/vex/**",
+			"${workspaceFolder}/include/**"
 		]
 	},
 	"configurations": [
