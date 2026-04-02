@@ -1,9 +1,9 @@
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
-/*    Author:       nagchilakala                                              */
-/*    Created:      4/2/2026, 6:23:28 PM                                      */
-/*    Description:  IQ2 project                                               */
+/*    Author:       Anish Chilakala                                           */
+/*    Created:      4/2/2026                                                  */
+/*    Description:  IQOS - Custom Operating System for VEX IQ2               */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 #include "vex.h"
@@ -11,18 +11,15 @@
 using namespace vex;
 
 // A global instance of vex::brain used for printing to the IQ2 brain screen
-vex::brain       Brain;
-
-// define your global instances of motors and other devices here
-
+vex::brain Brain;
 
 int main() {
-	
-    Brain.Screen.printAt( 2, 30, "Hello IQ2" );
-   
+    
+    // IQOS Boot Sequence
+    // iqos::boot::BootManager::initialize();
+    // Everything will be initialized from here when IQOS is complete
+    
     while(1) {
-        
-        // Allow other tasks to run
         this_thread::sleep_for(10);
     }
 }
