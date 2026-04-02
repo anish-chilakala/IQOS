@@ -1,0 +1,39 @@
+---
+name: Feature Request
+about: Suggest a new feature or improvement for IQOS
+title: "[FEATURE] "
+labels: enhancement
+assignees: ''
+---
+
+## Summary
+A clear and concise description of the feature you are requesting.
+
+## Problem This Solves
+What problem does this feature solve? What limitation does it remove?
+
+## Proposed Solution
+A clear and concise description of what you want to happen.
+
+## Alternatives Considered
+A clear and concise description of any alternative solutions or features you have considered.
+
+## Which Part of IQOS Does This Affect?
+- [ ] Task & Scheduler
+- [ ] Timing System
+- [ ] Hardware Abstraction Layer
+- [ ] Event System
+- [ ] Memory & Storage
+- [ ] Error Handling
+- [ ] Logging System
+- [ ] Power Management
+- [ ] Boot System
+- [ ] Other
+
+## Additional Context
+Add any other context, diagrams, or examples about the feature request here.
+
+## Checklist
+- [ ] I have checked that this feature has not already been requested
+- [ ] I have checked that this feature does not violate VEX's Student Centered Policy
+- [ ] I have considered how this feature would affect existing functionality
