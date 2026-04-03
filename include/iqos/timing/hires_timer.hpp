@@ -7,6 +7,7 @@ namespace timing {
 
 class HiResTimer {
 public:
+    HiResTimer();
 //Calling the functions
     void start();
     void stop();

@@ -30,5 +30,11 @@ double HiResTimer::getElapsedMs() {
     return elapsedTime;
 }
 
+HiResTimer::HiResTimer() {
+    startTime=0;
+    elapsedTime=0;
+    isTimerRunning = false;
+}
+
 } // namespace timing
 } // namespace iqos
