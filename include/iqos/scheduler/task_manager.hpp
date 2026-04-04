@@ -2,6 +2,7 @@
 
 #include "vex.h"
 #include <string>
+#include <vector>
 #include "iqos/scheduler/task_priorities.hpp"
 
 namespace iqos {
