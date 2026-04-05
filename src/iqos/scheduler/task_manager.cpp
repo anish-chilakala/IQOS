@@ -78,5 +78,6 @@ bool TaskManager::isTaskRunning(std::string name) {
     return false;
 }
 
+
 } // namespace scheduler
 } // namespace iqos
