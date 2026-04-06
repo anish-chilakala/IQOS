@@ -14,7 +14,7 @@ namespace scheduler {
 
 void Semaphore::wait(){
 while (count == 0) {
-    vex::task::sleep(1); // Sleep for a short time to prevent busy waiting
+    vex::task::sleep(1); 
 }
 count--;
 }
