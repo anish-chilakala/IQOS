@@ -9,27 +9,27 @@ namespace iqos {
 namespace hal {
 Distance::Distance(uint8_t port) {
     //Vex IQ distance sensor initialization
-    DistanceSensor = vex::distance(port);
+    distanceSensor = vex::distance(port);
 }
 
-double distance::getDistanceMM() {
+double Distance::getDistanceMM() {
     // Get the current distance in millimeters from the distance sensor
-    return DistanceSensor.objectDistance(mm);
+    return distanceSensor.objectDistance(mm);
 }
 
-double distance::getDistanceInches() {
+double Distance::getDistanceInches() {
     // Get the current distance in inches from the distance sensor
     return getDistanceMM() / 25.4;
 }
 
-bool distance::isObjectDetected() {
+bool Distance::isObjectDetected() {
     // Check if an object is detected within the sensor's range
-    return DistanceSensor.isObjectDetected();
+    return distanceSensor.isObjectDetected();
 }
 
-double distance::getSignalStrength() {
+double Distance::getSignalStrength() {
     // Get the signal strength of the detected object (if supported by the sensor)
-    return DistanceSensor.signalStrength();
+    return distanceSensor.signalStrength();
 }
 
 
