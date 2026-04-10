@@ -6,7 +6,7 @@ using namespace vex;
 extern vex::brain Brain;
 
 namespace iqos {
-namespace scheduler {
+namespace events {
 EventBus::EventBus() {
     // nothing to initialize, event queue starts empty automatically
 }
