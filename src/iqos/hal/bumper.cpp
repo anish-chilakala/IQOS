@@ -31,4 +31,3 @@ bool Bumper::wasPressed() {
 }//namespace hal
 }//namespace iqos
 
-
