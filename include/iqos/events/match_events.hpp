@@ -17,7 +17,7 @@ class MatchEvents {
     DRIVER,
     DISABLED
     };
-    
+
     MatchEvents(EventBus& eventBus);
     // Function Declarations here
     void update();
