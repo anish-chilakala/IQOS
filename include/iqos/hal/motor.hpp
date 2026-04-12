@@ -22,6 +22,7 @@ class Motor {
     bool isStalled();
     bool isOverheating();
     void resetPosition();
+    double getVoltage();
 
 
 
