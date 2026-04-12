@@ -12,7 +12,7 @@ namespace memory {
        
         public:
 StackAllocator(uint32_t size);
--StackAllocator();
+~StackAllocator();
        //Function Declarations here
 uint8_t* allocate(uint32_t size);
 void deallocate(uint32_t size);
