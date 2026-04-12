@@ -1,5 +1,9 @@
 #include "iqos/errors/fault_detection.hpp"
 
+#include "vex.h"
+using namespace vex;
+extern vex::brain Brain;
+
 
 
 namespace iqos {
