@@ -11,9 +11,8 @@ namespace boot {
     class BootScreen {
         
         public:
-     BootScreen(Screen& screen);   
+BootScreen(hal::Screen& screen);   
  // Function Declerations here
- BootScreen(Screen& screen);
 void show();
 void updateProgress(int progress);
 void hide();
@@ -22,7 +21,7 @@ void hide();
 
         private:
 // Private Declarations for battery management
-Screen& screen;
+hal::Screen& screen;
 
         
     };

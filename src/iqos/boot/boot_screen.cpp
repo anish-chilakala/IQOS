@@ -8,7 +8,7 @@ extern vex::brain Brain;
 
 namespace iqos {
 namespace boot{
-    BootScreen::BootScreen(Screen& screen) : screen(screen) {
+    BootScreen::BootScreen(hal::Screen& screen) : screen(screen) {
     }
 
 vex::color blue = vex::color(0, 0, 255); //blue for Vex IQ

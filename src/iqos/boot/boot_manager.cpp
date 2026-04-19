@@ -1,67 +1,46 @@
+
+
+#include "vex.h"
 #include "iqos/boot/boot_manager.hpp"
-#include <stdexcept>
+using namespace vex;
+extern vex::brain Brain;
 
 namespace iqos {
-namespace boot {
+namespace boot{
+    
+    void BootManager::boot() {
+        Screen.printText(110, 160, "Checking Boot...");
+        iqos::boot::Boot::init();
 
-BootManager::BootManager(hal::Screen& screen)
-    : screen(screen), bootScreen(screen) {}
+        Screen.printText(110, 160, "Checking Errors...");
+        iqos::errors::Errors::init();
 
-void BootManager::registerModule(const Module& module) {
-    modules.push_back(module);
-}
+        Screen.printText(110, 160, "Checking Events...");
+        iqos::events::Events::init();
 
-void BootManager::visit(
-    const std::string& name,
-    std::unordered_map<std::string, Module>& map,
-    std::unordered_set<std::string>& visited,
-    std::unordered_set<std::string>& temp,
-    std::vector<Module>& ordered
-) {
-    if (temp.count(name)) {
-        throw std::runtime_error("Circular dependency: " + name);
+        Screen.printText(110, 160, "Checking HAL...");
+        iqos::hal::HAL::init();
+
+        Screen.printText(110, 160, "Checking Logging...");
+        iqos::logging::Logging::init();
+
+        Screen.printText(110, 160, "Checking Memory...");
+        iqos::memory::Memory::init();
+
+        screen.printText(110, 160, "Checking Power...");
+        iqos::power::Power::init();
+
+        Screen.printText(110, 160, "Checking Scheduler...");
+        iqos::scheduler::Scheduler::init();
+        
+        Screen.printText(110, 160, "Checking Timing...");
+        iqos::timing::Timing::init();
     }
 
-    if (visited.count(name)) return;
 
-    temp.insert(name);
 
-    for (auto& dep : map[name].dependsOn) {
-        visit(dep, map, visited, temp, ordered);
-    }
 
-    temp.erase(name);
-    visited.insert(name);
-    ordered.push_back(map[name]);
-}
 
-void BootManager::run() {
-    bootScreen.show();
-
-    std::unordered_map<std::string, Module> map;
-    for (auto& m : modules) {
-        map[m.name] = m;
-    }
-
-    std::vector<Module> ordered;
-    std::unordered_set<std::string> visited;
-    std::unordered_set<std::string> temp;
-
-    for (auto& m : modules) {
-        visit(m.name, map, visited, temp, ordered);
-    }
-
-    int progress = 0;
-    int step = 100 / (ordered.empty() ? 1 : ordered.size());
-
-    for (auto& m : ordered) {
-        m.init();
-        progress += step;
-        bootScreen.updateProgress(progress);
-    }
-
-    bootScreen.hide();
-}
 
 } // namespace boot
 } // namespace iqos
